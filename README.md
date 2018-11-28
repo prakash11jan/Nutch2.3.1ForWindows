@@ -141,4 +141,5 @@ gora.datastore.default=org.apache.gora.hbase.store.HBaseStore
 
 6. now start hbase server using window command. navigate  to bin directory of Habse and provide start-hbase.cmd
 
-7. also set  the hadoop home and path
+
+ 7. also we need to download if we did not set hadoop home HADOOP_HOME = C:\cygwin64\home\hadoop\hadoop-2.7.1 PATH = %HADOOP_HOME%\bin;
