@@ -125,3 +125,27 @@ gora.datastore.default=org.apache.gora.hbase.store.HBaseStore
 
 
  7. also we need to download if we did not set hadoop home HADOOP_HOME = C:\cygwin64\home\hadoop\hadoop-2.7.1 PATH = %HADOOP_HOME%\bin;
+ 
+ 8. Ver important : comment out the following lines in local/nutch file
+ 
+ # setup 'java.library.path' for native-hadoop code if necessary
+# used only in local mode 
+#JAVA_LIBRARY_PATH=''
+#if [ -d "${NUTCH_HOME}/lib/native" ]; then
+
+ # JAVA_PLATFORM=`"${JAVA}" -classpath "$CLASSPATH" org.apache.hadoop.util.PlatformName | sed -e 's/ /_/g'`
+
+  #if [ -d "${NUTCH_HOME}/lib/native" ]; then
+   # if [ "x$JAVA_LIBRARY_PATH" != "x" ]; then
+    #  JAVA_LIBRARY_PATH="${JAVA_LIBRARY_PATH}:${NUTCH_HOME}/lib/native/${JAVA_PLATFORM}"
+    #else
+     # JAVA_LIBRARY_PATH="${NUTCH_HOME}/lib/native/${JAVA_PLATFORM}"
+    #fi
+  #fi
+#fi
+
+#if [ $cygwin = true -a "X${JAVA_LIBRARY_PATH}" != "X" ]; then
+ # JAVA_LIBRARY_PATH="`cygpath -p -w "$JAVA_LIBRARY_PATH"`"
+#fi
+ 
+ 
